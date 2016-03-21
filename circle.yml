@@ -27,6 +27,6 @@ dependencies:
 ## Customize deployment commands
 deployment:
   staging:
-    branch: master
+    branch: circle-ci
     commands:
       - sh deploy.sh
