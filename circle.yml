@@ -1,32 +1,29 @@
 ## Customize the test machine
 machine:
-  timezone:
-    America/Los_Angeles # Set the timezone
-
-  # Override /etc/hosts
-  hosts:
-    circlehost: 127.0.0.1
-    dev.mycompany.com: 127.0.0.1
-
-  # Add some environment variables
-  environment:
-    CIRCLE_ENV: test
-    DATABASE_URL: postgres://ubuntu:@127.0.0.1:5432/circle_test
+#  timezone:
+#    America/Los_Angeles # Set the timezone
+#  hosts:
+#    circlehost: 127.0.0.1
+#  environment:
+#    CIRCLE_ENV: test
+#    DATABASE_URL: postgres://ubuntu:@127.0.0.1:5432/circle_test
 
 ## Customize checkout
-checkout:
-  post:
-    - git submodule sync
-    - git submodule update --init # use submodules
+#checkout:
+#  post:
+#    - git submodule sync
+#    - git submodule update --init # use submodules
 
 ## Customize dependencies
 dependencies:
   pre:
-    - echo 'hi' > here
+    - echo "$BOI" > here
+    - echo $BOI > hi
+    - echo $CIRCLE_ENV
 
 ## Customize deployment commands
 deployment:
   staging:
-    branch: circle-ci
+    branch: master
     commands:
       - sh deploy.sh
