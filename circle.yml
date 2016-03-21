@@ -2,13 +2,8 @@
 machine:
   timezone:
     America/Los_Angeles # Set the timezone
-
-  # Override /etc/hosts
   hosts:
-    circlehost: 127.0.0.1
-    dev.mycompany.com: 127.0.0.1
-
-  # Add some environment variables
+#    circlehost: 127.0.0.1
   environment:
     CIRCLE_ENV: test
     DATABASE_URL: postgres://ubuntu:@127.0.0.1:5432/circle_test
@@ -22,7 +17,7 @@ checkout:
 ## Customize dependencies
 dependencies:
   pre:
-    - echo 'hi' > here
+    - echo "$BOI" > here
 
 ## Customize deployment commands
 deployment:
