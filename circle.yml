@@ -1,5 +1,5 @@
 ## Customize the test machine
-machine:
+#machine:
 #  timezone:
 #    America/Los_Angeles # Set the timezone
 #  hosts:
