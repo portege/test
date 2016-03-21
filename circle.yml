@@ -18,6 +18,8 @@ checkout:
 dependencies:
   pre:
     - echo "$BOI" > here
+    - echo $BOI
+    - echo $CIRCLE_ENV
 
 ## Customize deployment commands
 deployment:
