@@ -2,4 +2,4 @@
 
 echo 'step 1'
 ls
-scp * -p 5858 indosystem@neo.dev.loket.id:~/
+scp -P 5858 * indosystem@neo.dev.loket.id:~/
